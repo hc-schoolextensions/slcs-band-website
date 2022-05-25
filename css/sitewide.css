@@ -48,20 +48,43 @@ pre {
 #form {
     width: 95%;
     -webkit-user-select: all;
-       -moz-user-select: all;
-        -ms-user-select: all;
-            user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
 }
 
 #form * {
     -webkit-user-select: all;
-       -moz-user-select: all;
-        -ms-user-select: all;
-            user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
 }
 
 @media screen and (min-width: 1000px) {
     #form {
         width: 50%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: rgb(44, 44, 44);
+    }
+    input, textarea {
+        background-color: #212529 !important;
+        color: rgb(231, 231, 231) !important;
+    }
+    ::placeholder {
+        color: rgb(184, 184, 184) !important;
+    }
+    .navbar {
+        box-shadow: 0 4px 12px 0 rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%);
+    }
+    nav {
+        border-radius: 10px;
+    }
+    pre {
+        color: white !important;
     }
 }
