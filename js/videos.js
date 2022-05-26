@@ -14,7 +14,14 @@ frames.forEach(element => {
     });
 });
 
-const cb = document.querySelectorAll('[data-ytmodal]');
+const frames2 = document.querySelectorAll('[data-ytmodal]');
+frames2.forEach(element => {
+    element.addEventListener('click', function (e) {
+        toggleVideo("hide", element.dataset.mIndex - 1);
+    });
+});
+
+const cb = document.querySelectorAll('[data-close]');
 cb.forEach(element => {
     element.addEventListener('click', function (e) {
         toggleVideo("hide", element.dataset.mIndex - 1);
