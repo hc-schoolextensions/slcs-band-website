@@ -1,4 +1,4 @@
-var myRequest = new Request('https://raw.githubusercontent.com/hc-schoolextensions/slcs-band-website-data/main/schedule.txt');
+var myRequest = new Request('https://raw.githubusercontent.com/hc-schoolextensions/slcs-band-website/data/schedule.txt');
 
 fetch(myRequest)
     .then(response => response.text())
