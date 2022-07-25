@@ -3,4 +3,11 @@ var imageContainer = document.getElementById('imgcontainer');
 
 fetch(myRequest)
     .then(response => response.text())
-    .then(data => imageContainer.innerHTML = data);
+    .then(data => showImgs(data));
+
+function showImgs(imgData) {
+    imageContainer.innerHTML = imgData;
+    var imgScript = document.createElement('script');
+    imgScript.src = "https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js";
+    document.body.appendChild(imgScript);
+}
