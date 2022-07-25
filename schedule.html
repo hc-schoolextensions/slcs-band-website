@@ -49,11 +49,11 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Media & Performances
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                         <a class="dropdown-item active" href="/schedule.html">Performance Schedule</a>
                         <a class="dropdown-item" href="/videos.html">Videos & Concert Recordings</a>
                         <a class="dropdown-item" href="/pictures.html">Pictures</a>
@@ -71,7 +71,14 @@
 
         </pre>
     </div>
-    <script src="/js/schedule.js"></script>
+    <script>
+        var myRequest = new Request(
+            'https://raw.githubusercontent.com/hc-schoolextensions/slcs-band-website/data/schedule.txt');
+
+        fetch(myRequest)
+            .then(response => response.text())
+            .then(data => document.getElementById('schedule-container').innerText = data);
+    </script>
 </body>
 
 </html>
